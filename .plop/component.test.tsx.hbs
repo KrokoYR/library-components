@@ -1,0 +1,18 @@
+import React from 'react';
+
+import { {{pascalCase name}} } from '.';
+
+import { mountWithTheme, shallowWithTheme } from '../../utils/jest';
+
+describe('{{pascalCase name}}', () => {
+  test('rendering', () => {
+    const wrapper = mountWithTheme(<{{pascalCase name}} />);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  test('prop className', () => {
+    const className = '{{pascalCase name}}';
+    const wrapper = shallowWithTheme(<{{pascalCase name}} className={className} />);
+    expect(wrapper.find({{pascalCase name}}).hasClass(className)).toBe(true);
+  });
+});

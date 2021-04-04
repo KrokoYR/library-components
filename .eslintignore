@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.plop/
+.vscode/
+
+craco.config.js
