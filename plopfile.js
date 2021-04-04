@@ -11,11 +11,17 @@ module.exports = (plop) => {
 		templateFile: '.plop/index.ts.hbs',
 	};
 
+	const createCssFile = {
+		type: 'add',
+		path: 'src/components/{{pascalCase name}}/{{pascalCase name}}.css',
+		templateFile: '.plop/component.css.hbs',
+	};
+
 	const createStoryFile = {
 		type: 'add',
 		path:
 			'src/components/{{pascalCase name}}/{{pascalCase name}}.stories.tsx',
-		templateFile: '.plop/component.story.tsx.hbs',
+		templateFile: '.plop/component.stories.tsx.hbs',
 	};
 
 	const createTestFile = {
@@ -42,6 +48,7 @@ module.exports = (plop) => {
 		actions: [
 			createComponentFile,
 			createIndexFile,
+			createCssFile,
 			createStoryFile,
 			createTestFile,
 		],
